@@ -51,7 +51,7 @@ print_births() {
     ')
 
     if [[ "$DAY" == "04" && "$MONTH" == "11" ]]; then
-        births="${births}"$'\n'"• 1998 - rengenk, thats me lol :D"
+        births="${births}"$'\n'"• 1998 - rengenk, DevOps-engineer (thats me lol :D)"
     fi
 
     births=$(printf '%s\n' "$births" |
