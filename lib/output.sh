@@ -50,6 +50,14 @@ print_births() {
         | "• \(.year) — \(.text)"
     ')
 
+    if [[ "$DAY" == "04" && "$MONTH" == "11" ]]; then
+        births="${births}"$'\n'"• 1998 - rengenk, thats me lol :D"
+    fi
+
+    births=$(printf '%s\n' "$births" |
+        sort -n -t'|' -k1,1 |
+        sed 's/^[^|]*|/• /')
+
     print_section "BIRTHS:" "$births"
 }
 
